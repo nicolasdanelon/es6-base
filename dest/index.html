@@ -2,6 +2,11 @@
     <body>
         <div></div>
         <script src="./bundle.js"></script>
-        <script>theApp.run('nicolas')</script>
+        <script>
+            theApp.run('nicolas');
+
+            const newUser = theApp.crearUsuario('Nicolas', 'Danelon', 'green', '20-08-1988');
+            console.log(newUser);
+            </script>
     </body>
 </html>
