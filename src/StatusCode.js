@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 class StatusCode extends PureComponent {
     explainStatusCode(statusCode) {
         let explain;
-        switch(statusCode) {
+        switch(parseInt(statusCode)) {
             case 200:
                 explain = 'ok';
                 break;

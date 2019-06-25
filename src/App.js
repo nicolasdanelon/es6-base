@@ -25,10 +25,8 @@ class App extends Component {
   }
 
   handleChange(e) {
-    console.log(e.target.name, e.target.value)
     this.setState({
       [e.target.name]: e.target.value
-      // code: value
     });
   }
 
@@ -66,7 +64,7 @@ class App extends Component {
           ))}
         </select>
 
-        <StatusCode 
+        <StatusCode
           statusCode={code}
         />
 
