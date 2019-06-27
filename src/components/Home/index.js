@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 
+import Nav from '../Nav';
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -66,7 +68,10 @@ class Home extends Component {
 
     return (
       <Fragment>
-        {this.displayAllPlanets()}
+        <h2>Home</h2>
+
+        <Nav current="home" />
+
         <input
           name="name"
           onChange={this.handleChange} 
@@ -79,11 +84,8 @@ class Home extends Component {
           onChange={(e) => this.setState({ pepito: e.target.value })} 
         />
         <span>{pepito}</span>
-        <h1>Home!</h1>
-        <button onClick={() => this.getPlanets()}>
-          Obtener planetas
-        </button>
-        <span>{name}</span>
+
+        {this.displayAllPlanets()}
 
       </Fragment>
     );
